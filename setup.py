@@ -6,6 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
+# Change values if you want
 REPO_NAME = "End-to-end-ML-Project-with-MLflow"
 AUTHOR_USER_NAME = "cesar_chalco"
 SRC_REPO = "mlProject"
