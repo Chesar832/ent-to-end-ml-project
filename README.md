@@ -1,6 +1,6 @@
-# Proyecto de MLOps: [Nombre del Proyecto]
+# Proyecto de MLOps: End-to-end ML Project
 
-![Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv_f_N-CDFsCtLg5FAXPUE8edE4jAedtXaiRZi9VXb&s)
+![Banner](https://geekflare.com/cdn-cgi/image/width=800,height=257,fit=crop,quality=90,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2023/06/MLOps-Platforms.png)
 
 ## Descripción del Proyecto
 
