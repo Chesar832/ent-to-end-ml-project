@@ -1,9 +1,16 @@
-from src.mlProject import logger
+from mlProject import logger
+from mlProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
+STAGE_NAME = "Data Ingestion Stage"
 
-
-logger.info("Welcome to our MLOps custom logging")
-
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = DataIngestionTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\n=========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 
