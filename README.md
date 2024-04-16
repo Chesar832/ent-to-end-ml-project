@@ -1,55 +1,168 @@
-# Proyecto de MLOps: End-to-end ML Project
+# End-to-end-Machine-Learning-Project-with-MLflow
 
-![Banner](https://geekflare.com/cdn-cgi/image/width=800,height=257,fit=crop,quality=90,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2023/06/MLOps-Platforms.png)
 
-## Descripción del Proyecto
+## Workflows
 
-[Descripción breve del proyecto de MLOps y su propósito.]
+1. Update config.yaml
+2. Update schema.yaml
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline 
+8. Update the main.py
+9. Update the app.py
 
-## Funcionalidades Principales
 
-- [Funcionalidad 1]
-- [Funcionalidad 2]
-- [Funcionalidad 3]
 
-## Arquitectura
+# How to run?
+### STEPS:
 
-[Descripción de la arquitectura general del proyecto, incluyendo las principales tecnologías utilizadas y cómo se relacionan entre sí.]
+Clone the repository
 
-## Configuración
+```bash
+https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+```
+### STEP 01- Create a conda environment after opening the repository
 
-### Requisitos Previos
+```bash
+conda create -n mlproj python=3.8 -y
+```
 
-- [Requisito 1]
-- [Requisito 2]
-- [Requisito 3]
+```bash
+conda activate mlproj
+```
 
-### Instalación
 
-1. [Paso 1]
-2. [Paso 2]
-3. [Paso 3]
+### STEP 02- install the requirements
+```bash
+pip install -r requirements.txt
+```
 
-## Uso
 
-1. [Instrucciones de uso 1]
-2. [Instrucciones de uso 2]
-3. [Instrucciones de uso 3]
+```bash
+# Finally run the following command
+python app.py
+```
 
-## Contribución
+Now,
+```bash
+open up you local host and port
+```
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
 
-1. Haz un fork del proyecto
-2. Crea una rama para tu nueva característica (`git checkout -b feature/NuevaCaracteristica`)
-3. Haz commit de tus cambios (`git commit -am 'Agrega una nueva característica'`)
-4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
 
-## Licencia
+## MLflow
 
-Este proyecto está bajo la Licencia MIT - ve el archivo [LICENSE](LICENSE) para más detalles.
+[Documentation](https://mlflow.org/docs/latest/index.html)
 
-## Contacto
 
-[Nombre del Autor] - [Correo Electrónico]
+##### cmd
+- mlflow ui
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/Chesar832/ent-to-end-ml-project.mlflow \
+MLFLOW_TRACKING_USERNAME=Chesar832 \
+MLFLOW_TRACKING_PASSWORD=7428b7e4ed495e4e06fb04cfdac3695394433364 \
+python script.py
+
+Run this to export as env variables:
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/Chesar832/ent-to-end-ml-project.mlflow
+
+export MLFLOW_TRACKING_USERNAME=Chesar832 
+
+export MLFLOW_TRACKING_PASSWORD=7428b7e4ed495e4e06fb04cfdac3695394433364
+
+```
+
+
+
+# AWS-CICD-Deployment-with-Github-Actions
+
+## 1. Login to AWS console.
+
+## 2. Create IAM user for deployment
+
+	#with specific access
+
+	1. EC2 access : It is virtual machine
+
+	2. ECR: Elastic Container registry to save your docker image in aws
+
+
+	#Description: About the deployment
+
+	1. Build docker image of the source code
+
+	2. Push your docker image to ECR
+
+	3. Launch Your EC2 
+
+	4. Pull Your image from ECR in EC2
+
+	5. Lauch your docker image in EC2
+
+	#Policy:
+
+	1. AmazonEC2ContainerRegistryFullAccess
+
+	2. AmazonEC2FullAccess
+
+	
+## 3. Create ECR repo to store/save docker image
+    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
+
+	
+## 4. Create EC2 machine (Ubuntu) 
+
+## 5. Open EC2 and Install docker in EC2 Machine:
+	
+	
+	#optinal
+
+	sudo apt-get update -y
+
+	sudo apt-get upgrade
+	
+	#required
+
+	curl -fsSL https://get.docker.com -o get-docker.sh
+
+	sudo sh get-docker.sh
+
+	sudo usermod -aG docker ubuntu
+
+	newgrp docker
+	
+# 6. Configure EC2 as self-hosted runner:
+    setting>actions>runner>new self hosted runner> choose os> then run command one by one
+
+
+# 7. Setup github secrets:
+
+    AWS_ACCESS_KEY_ID=
+
+    AWS_SECRET_ACCESS_KEY=
+
+    AWS_REGION = us-east-1
+
+    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
+    ECR_REPOSITORY_NAME = simple-app
+
+
+
+
+## About MLflow 
+MLflow
+
+ - Its Production Grade
+ - Trace all of your expriements
+ - Logging & tagging your model
+
+
